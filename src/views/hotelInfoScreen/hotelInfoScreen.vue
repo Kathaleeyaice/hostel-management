@@ -11,7 +11,7 @@
         <div>Price :</div>
       </div>
     </div>
-    <div  class="infoBottom">
+    <div class="infoBottom">
       <h2>address</h2>
     </div>
   </div>
@@ -27,29 +27,29 @@ export default {
 };
 </script>
 <style scoped>
-.hotelInfoScreen{
+.hotelInfoScreen {
   top: 10vh;
   left: 0;
   right: 0;
   bottom: 0;
   position: fixed;
 }
-.infoTop{
+.infoTop {
   display: inline-flex;
   margin: auto;
   width: 100%;
   height: 50%;
 }
-.infoTopLeft{
+.infoTopLeft {
   width: 50%;
 }
-.imgBox{
+.imgBox {
   width: 80%;
   height: 100%;
   margin: auto;
   background-color: antiquewhite;
 }
-.infoTopRight{
+.infoTopRight {
   width: 50%;
 }
 </style>

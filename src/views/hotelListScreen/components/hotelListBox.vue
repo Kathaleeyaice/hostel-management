@@ -1,10 +1,10 @@
 <template>
   <div class="hotelListBox">
     <!-- <div v-for="hotelList in hotelLists" :key="hotelList" class="Box"> -->
-      <h2>Hotel A</h2>
-      <div>Detail :</div>
-      <div>Status :</div>
-      <div>Price :</div>
+    <h2>Hotel A</h2>
+    <div>Detail :</div>
+    <div>Status :</div>
+    <div>Price :</div>
     <!-- </div> -->
   </div>
 </template>
