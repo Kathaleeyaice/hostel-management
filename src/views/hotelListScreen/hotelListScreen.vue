@@ -1,23 +1,28 @@
 <template>
   <div class="hotelListScreen">
-    hotel
+    <div class="availableBox">
+      Available hotel
+    </div>
+    <hotelListBox :hotelList="hotelLists"></hotelListBox>
     {{ hoteList }}
   </div>
 </template>
 
 <script>
-//import headerMessenger from '@/views/TypePeople/components/headerMessenger.vue'
+import hotelListBox from "@/views/hotelListScreen/components/hotelListBox.vue";
 
 export default {
   name: "hotelListScreen",
   data() {
     return {
-      hoteList: [],
+      hoteLists: [],
       hoteAvailableList: [],
       showAvailable: false
     };
   },
-  components: {},
+  components: {
+    hotelListBox
+  },
   mounted() {
     this.fetchHotel();
   },
@@ -49,3 +54,19 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.hotelListScreen {
+  position: fixed;
+  top: 10vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.availableBox {
+  width: 92%;
+  height: 5%;
+  padding-top: 1%;
+  margin: auto;
+}
+</style>
