@@ -1,14 +1,16 @@
 <template>
   <div class="hotelListScreen">
     <div class="filterBox">
-      โรงแรมที่ว่าง
+      <input type="checkbox" id="checkbox" v-model="showAvailable">โรงแรมที่ว่าง
     </div>
     <div v-if="!isLoading">
       <div v-if="showAvailable">
         <hotelListBox :hotelList="hotelAvailableList"></hotelListBox>
+        โรงแรมว่าง
       </div>
       <div v-else>
         <hotelListBox :hotelList="hotelLists"></hotelListBox>
+        โรงแรมไม่ว่าง
       </div>
     </div>
   </div>
@@ -24,6 +26,7 @@ export default {
       hotelLists: [],
       hotelAvailableList: [],
       showAvailable: false,
+      availableToggle: false,
       isLoading: true
     };
   },
@@ -54,10 +57,18 @@ export default {
         .then(response => {
           this.hotelLists = response.data;
           this.isLoading = false;
+          this.createHotelAvailableList();
         })
         .catch(err => {
           console.log(err);
         });
+    },
+    createHotelAvailableList() {
+      this.hotelLists.forEach(hotel => {
+        if(hotel.available) {
+          this.hotelAvailableList.push(hotel);
+        }
+      });
     }
   }
 };
