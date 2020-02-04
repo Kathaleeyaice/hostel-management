@@ -28,6 +28,12 @@ export default {
       hotelLists: this.hotelList
     };
   },
+  watch: {
+    // whenever hotelList changes, this function will run
+    hotelList: function (value) {
+      this.hotelLists = value
+    }
+  },
   mounted() {}
 };
 </script>
@@ -38,6 +44,7 @@ export default {
   height: 20%;
   border: solid;
   margin: auto;
+  margin-top: 1%;
   padding: 1%;
 }
 </style>
