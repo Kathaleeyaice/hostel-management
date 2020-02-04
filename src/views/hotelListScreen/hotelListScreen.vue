@@ -1,13 +1,15 @@
 <template>
   <div class="hotelListScreen">
-    <div class="availableBox">
+    <div class="filterBox">
       Available hotel
     </div>
-    <div v-if="showAvailable">
-      <hotelListBox :hotelList="hotelAvailableList"></hotelListBox>
-    </div>
-    <div v-else>
-      <hotelListBox :hotelList="hotelLists"></hotelListBox>
+    <div v-if="!isLoading">
+      <div v-if="showAvailable">
+        <hotelListBox :hotelList="hotelAvailableList"></hotelListBox>
+      </div>
+      <div v-else>
+        <hotelListBox :hotelList="hotelLists"></hotelListBox>
+      </div>
     </div>
   </div>
 </template>
@@ -21,7 +23,8 @@ export default {
     return {
       hotelLists: [],
       hotelAvailableList: [],
-      showAvailable: false
+      showAvailable: false,
+      isLoading: true
     };
   },
   components: {
@@ -50,6 +53,7 @@ export default {
         })
         .then(response => {
           this.hotelLists = response.data;
+          this.isLoading = false;
         })
         .catch(err => {
           console.log(err);
