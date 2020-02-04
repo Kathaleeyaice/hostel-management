@@ -1,14 +1,14 @@
 <template>
   <div class="bookingScreen">
     <div class="bookingLeft">
-      <h2>Hotel Booking</h2>
+      <h2>จองโรงแรม</h2>
       <form>
         <div class="inputBox">
           <input
             type="text"
             class="inputText"
             v-model="inputName"
-            placeholder="Name"
+            placeholder="ชื่อ-นามสกุล"
           />
         </div>
         <div class="inputBox">
@@ -16,7 +16,7 @@
             type="text"
             class="inputText"
             v-model="inputAddress"
-            placeholder="Address"
+            placeholder="ที่อยู่"
           />
         </div>
         <div class="inputBox">
@@ -24,7 +24,7 @@
             type="text"
             class="inputText"
             v-model="inputTel"
-            placeholder="Tel"
+            placeholder="เบอร์โทร"
           />
         </div>
         <div class="inputBox">
@@ -32,7 +32,7 @@
             type="text"
             class="inputText"
             v-model="inputDate"
-            placeholder="Date"
+            placeholder="วันที่จอง"
           />
         </div>
         <div class="inputBox">
@@ -40,7 +40,7 @@
             type="text"
             class="inputText"
             v-model="inputRoom"
-            placeholder="Room"
+            placeholder="ห้อง"
           />
         </div>
       </form>
@@ -50,7 +50,7 @@
         img
       </div>
       <div class="bookingButton">
-        <button>Booking Now!</button>
+        <button>จองโรงแรม</button>
       </div>
     </div>
   </div>

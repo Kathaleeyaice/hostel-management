@@ -5,14 +5,14 @@
         <div class="imgBox"></div>
       </div>
       <div class="infoTopRight">
-        <h2>Hotel A</h2>
-        <div>Detail :</div>
-        <div>Status :</div>
-        <div>Price :</div>
+        <h2>ชื่อโรงแรม</h2>
+        <div>รายละเอียด :</div>
+        <div>สถานะ :</div>
+        <div>ราคา :</div>
       </div>
     </div>
     <div class="infoBottom">
-      <h2>address</h2>
+      <h2>ที่อยู่</h2>
     </div>
   </div>
 </template>

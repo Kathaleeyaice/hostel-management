@@ -2,10 +2,10 @@
   <div class="homeScreen">
     <div class="navBar">
       <div>
-        Home
+        หน้าหลัก
       </div>
       <div class="loginButton">
-        Login
+        เข้าสู่ระบบ
       </div>
     </div>
     <router-view></router-view>

@@ -1,7 +1,7 @@
 <template>
   <div class="hotelListScreen">
     <div class="filterBox">
-      Available hotel
+      โรงแรมที่ว่าง
     </div>
     <div v-if="!isLoading">
       <div v-if="showAvailable">
