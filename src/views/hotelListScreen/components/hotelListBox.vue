@@ -1,11 +1,18 @@
 <template>
   <div class="hotelListBox">
-    <!-- <div v-for="hotelList in hotelLists" :key="hotelList" class="Box"> -->
-    <h2>Hotel A</h2>
-    <div>Detail :</div>
-    <div>Status :</div>
-    <div>Price :</div>
-    <!-- </div> -->
+    <div v-for="hotel in hotelLists" :key="hotel" class="hotelBox">
+      <h2>{{ hotel.name }}</h2>
+      <div>รายละเอียด :{{ hotel.detail }}</div>
+      <div>
+        <div v-if="hotel.available">
+          ว่าง
+        </div>
+        <div v-else>
+          ไม่ว่าง
+        </div>
+      </div>
+      <div>ราคา :{{ hotel.price }}</div>
+    </div>
   </div>
 </template>
 
@@ -14,20 +21,19 @@ export default {
   name: "hotelListBox",
   components: {},
   props: {
-    hotelList: {
-      type: Array
-    }
+    hotelList: Array
   },
   data() {
     return {
       hotelLists: this.hotelList
     };
-  }
+  },
+  mounted() {}
 };
 </script>
 
 <style scoped>
-.hotelListBox {
+.hotelBox {
   width: 90%;
   height: 20%;
   border: solid;
