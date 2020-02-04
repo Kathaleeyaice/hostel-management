@@ -3,8 +3,12 @@
     <div class="availableBox">
       Available hotel
     </div>
-    <hotelListBox :hotelList="hotelLists"></hotelListBox>
-    {{ hoteList }}
+    <div v-if="showAvailable">
+      <hotelListBox :hotelList="hotelAvailableList"></hotelListBox>
+    </div>
+    <div v-else>
+      <hotelListBox :hotelList="hotelLists"></hotelListBox>
+    </div>
   </div>
 </template>
 
@@ -15,8 +19,8 @@ export default {
   name: "hotelListScreen",
   data() {
     return {
-      hoteLists: [],
-      hoteAvailableList: [],
+      hotelLists: [],
+      hotelAvailableList: [],
       showAvailable: false
     };
   },
@@ -45,7 +49,7 @@ export default {
           }
         })
         .then(response => {
-          this.hoteList = response.data;
+          this.hotelLists = response.data;
         })
         .catch(err => {
           console.log(err);
