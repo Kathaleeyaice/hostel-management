@@ -4,6 +4,7 @@
       <div
         v-if="(showAvailable && hotel.available) || !showAvailable"
         class="hotelBox"
+        @click="goInfo(hotel.id)"
       >
         <h2>{{ hotel.name }}</h2>
         <div>รายละเอียด :{{ hotel.detail }}</div>
@@ -41,7 +42,11 @@ export default {
       this.showAvailable = value;
     }
   },
-  mounted() {}
+  methods: {
+    goInfo(id) {
+      this.$router.push({ path: `/info/${id}` });
+    }
+  }
 };
 </script>
 
@@ -53,5 +58,8 @@ export default {
   margin: auto;
   margin-top: 1%;
   padding: 1%;
+}
+.hotelBox:hover {
+  width: 85%;
 }
 </style>
