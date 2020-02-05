@@ -1,17 +1,22 @@
 <template>
   <div class="hotelListBox">
-    <div v-for="hotel in hotelLists" :key="hotel" class="hotelBox">
-      <h2>{{ hotel.name }}</h2>
-      <div>รายละเอียด :{{ hotel.detail }}</div>
-      <div>
-        <div v-if="hotel.available">
-          ว่าง
+    <div v-for="hotel in hotelLists" :key="hotel">
+      <div
+        v-if="(showAvailable && hotel.available) || !showAvailable"
+        class="hotelBox"
+      >
+        <h2>{{ hotel.name }}</h2>
+        <div>รายละเอียด :{{ hotel.detail }}</div>
+        <div>
+          <div v-if="hotel.available">
+            ว่าง
+          </div>
+          <div v-else>
+            ไม่ว่าง
+          </div>
         </div>
-        <div v-else>
-          ไม่ว่าง
-        </div>
+        <div>ราคา :{{ hotel.price }}</div>
       </div>
-      <div>ราคา :{{ hotel.price }}</div>
     </div>
   </div>
 </template>
@@ -21,17 +26,19 @@ export default {
   name: "hotelListBox",
   components: {},
   props: {
-    hotelList: Array
+    hotelList: Array,
+    status: Boolean
   },
   data() {
     return {
-      hotelLists: this.hotelList
+      hotelLists: this.hotelList,
+      showAvailable: this.status
     };
   },
   watch: {
-    // whenever hotelList changes, this function will run
-    hotelList: function (value) {
-      this.hotelLists = value
+    // whenever status changes, this function will run
+    status: function(value) {
+      this.showAvailable = value;
     }
   },
   mounted() {}
