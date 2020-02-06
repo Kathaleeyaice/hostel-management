@@ -26,6 +26,8 @@
 </template>
 
 <script>
+import config from "../../config.json";
+
 export default {
   name: "hotelInfoScreen",
   data() {
@@ -41,15 +43,12 @@ export default {
   },
   methods: {
     fetchHotel() {
-      fetch(
-        `https://316ca798-78b7-4c48-8927-54b12bfdaf4b.mock.pstmn.io/hotel/info/${this.$route.params.id}`,
-        {
-          method: "GET",
-          headers: {
-            Accept: "application/json"
-          }
+      fetch(`${config.api}/hotel/info/${this.$route.params.id}`, {
+        method: "GET",
+        headers: {
+          Accept: "application/json"
         }
-      )
+      })
         .then(response => {
           if (response.status != 200) {
             console.log("ERROR Status: " + response.status);
