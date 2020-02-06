@@ -15,6 +15,7 @@
             สถานะ : ไม่ว่าง
           </div>
           <div>ราคา :{{ hotelInfo.price }}</div>
+          <button v-on:click="goBooking()">จองโรงแรม</button>
         </div>
       </div>
       <div class="infoBottom">
@@ -63,6 +64,11 @@ export default {
         .catch(err => {
           console.log(err);
         });
+    },
+    goBooking() {
+      this.$router.push({
+        path: `/booking?id=${this.hotelInfo.id}&name=${this.hotelInfo.name}`
+      });
     }
   }
 };
