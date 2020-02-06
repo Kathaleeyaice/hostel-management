@@ -1,29 +1,71 @@
 <template>
   <div class="hotelInfoScreen">
-    <div class="infoTop">
-      <div class="infoTopLeft">
-        <div class="imgBox"></div>
+    <div v-if="!isLoading">
+      <div class="infoTop">
+        <div class="infoTopLeft">
+          <div class="imgBox"></div>
+        </div>
+        <div class="infoTopRight">
+          <h2>{{ hotelInfo.name }}</h2>
+          <div>รายละเอียด :{{ hotelInfo.detail }}</div>
+          <div v-if="hotelInfo.available">
+            สถานะ : ว่าง
+          </div>
+          <div v-else>
+            สถานะ : ไม่ว่าง
+          </div>
+          <div>ราคา :{{ hotelInfo.price }}</div>
+        </div>
       </div>
-      <div class="infoTopRight">
-        <h2>ชื่อโรงแรม</h2>
-        <div>รายละเอียด :</div>
-        <div>สถานะ :</div>
-        <div>ราคา :</div>
+      <div class="infoBottom">
+        <h2>ที่อยู่</h2>
+        <div>{{ hotelInfo.map.address }}</div>
       </div>
-    </div>
-    <div class="infoBottom">
-      <h2>ที่อยู่</h2>
     </div>
   </div>
 </template>
 
 <script>
-//import headerMessenger from '@/views/TypePeople/components/headerMessenger.vue'
-
 export default {
   name: "hotelInfoScreen",
+  data() {
+    return {
+      hotelInfo: null,
+      isLoading: true
+    };
+  },
   components: {},
-  props: {}
+  props: {},
+  mounted() {
+    this.fetchHotel();
+  },
+  methods: {
+    fetchHotel() {
+      fetch(
+        `https://316ca798-78b7-4c48-8927-54b12bfdaf4b.mock.pstmn.io/hotel/info/${this.$route.params.id}`,
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json"
+          }
+        }
+      )
+        .then(response => {
+          if (response.status != 200) {
+            console.log("ERROR Status: " + response.status);
+          } else {
+            return response.json();
+          }
+        })
+        .then(response => {
+          this.hotelInfo = response.data;
+          this.isLoading = false;
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
+  }
 };
 </script>
 <style scoped>
