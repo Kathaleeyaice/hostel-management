@@ -34,8 +34,8 @@ export default {
     createUser() {
       if (
         !this.inputUsername.length ||
-        !this.inputPassword ||
-        !this.inputRepassword
+        !this.inputPassword.length ||
+        !this.inputRepassword.length
       ) {
         alert("กรุณากรอกข้อมูลให้ครบ");
         return;
