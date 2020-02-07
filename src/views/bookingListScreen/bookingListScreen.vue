@@ -1,7 +1,7 @@
 <template>
   <div class="bookingListScreen">
     <div v-if="!isLoading">
-      <h2>Booking List</h2>
+      <div class="bookingListHeader">Booking List</div>
       <div v-for="hotel in bookingList" :key="hotel">
         <bookingBox :booking="hotel"></bookingBox>
       </div>
@@ -64,5 +64,11 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-}</style
->>
+}
+.bookingListHeader {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 3vw;
+  margin-left: 4vw;
+}
+</style>
