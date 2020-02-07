@@ -69,6 +69,6 @@ export default {
   font-size: 25px;
   font-weight: bold;
   margin: 3vw;
-  margin-left: 4vw;
+  margin-left: 9vw;
 }
 </style>
