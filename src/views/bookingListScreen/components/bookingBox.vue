@@ -31,6 +31,7 @@ export default {
   box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
   transition: width 0.2s, height 0.2s;
+  background-color: #f8f8f8;
 }
 .bookingBox:hover {
   box-shadow: 2px 5px 4px rgba(2, 126, 234, 0.25);
