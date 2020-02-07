@@ -3,7 +3,9 @@
     <div v-if="!isLoading">
       <div class="infoTop">
         <div class="infoTopLeft">
-          <div class="imgBox"></div>
+          <div class="imgBox">
+            <img :src="hotelInfo.image">
+          </div>
         </div>
         <div class="infoTopRight">
           <h2>{{ hotelInfo.name }}</h2>
