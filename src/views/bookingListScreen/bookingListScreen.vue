@@ -1,7 +1,7 @@
 <template>
   <div class="bookingListScreen">
     <div v-if="!isLoading">
-      <div class="bookingListHeader">Booking List</div>
+      <div class="bookingListHeader">รายชื่อโรงแรมที่จอง</div>
       <div v-for="hotel in bookingList" :key="hotel">
         <bookingBox :booking="hotel"></bookingBox>
       </div>
