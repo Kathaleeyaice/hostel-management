@@ -47,7 +47,6 @@ export default {
 .navBar {
   width: 100%;
   height: 10vh;
-  background-color: grey;
   position: fixed;
   top: 0;
   left: 0;
