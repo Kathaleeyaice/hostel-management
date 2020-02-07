@@ -1,5 +1,7 @@
 <template>
   <div class="loginScreen">
+    <img src="./assets/bg.png" id="backgroung" />
+    <img src="./assets/bg2.png" id="backgroung2" />
     <div class="loginBox">
       <div class="loginHeader">
         LogIn
@@ -91,39 +93,68 @@ export default {
   right: 0%;
   left: 0%;
   bottom: 0%;
+  font-size: 14px;
 }
 .loginBox {
   width: 20%;
   height: 50%;
-  border: solid skyblue;
   margin: auto;
   margin-top: 10%;
+  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  background-color: #f8f8f8;
 }
 .loginHeader {
   font-size: 20px;
   text-align: center;
-  margin-top: 60px;
+  padding-top: 60px;
 }
 .loginForm {
   margin: auto;
   padding-top: 10%;
 }
-.inputText {
-  width: 200px;
-  margin-top: 15px;
-  margin-left: 50px;
+input {
+  width: 60%;
+  padding: 8px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-left: 60px;
+  margin-bottom: 10px;
 }
 .loginButton {
-  width: 50px;
-  background-color: skyblue;
-  box-shadow: none;
-  margin: auto;
-  margin-top: 5.247376vh;
-  margin-left: 120px;
+  background-color: #3c9ff5;
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
   cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+  margin-left: 100px;
+  margin-top: 20px;
+}
+.loginButton:hover {
+  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+  background-color: #6abaff;
 }
 .registerButton {
   text-align: center;
   margin-top: 10px;
+}
+a:link {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+}
+#backgroung {
+  left: 1170px;
+  top: 350px;
 }
 </style>
