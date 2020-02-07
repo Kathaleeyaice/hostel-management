@@ -4,7 +4,7 @@
     <img src="./assets/bg2.png" id="backgroung2" />
     <div class="loginBox">
       <div class="loginHeader">
-        LogIn
+        เข้าสู่ระบบ
       </div>
       <div class="loginForm">
         <div>
@@ -26,7 +26,7 @@
       </div>
       <button v-on:click="loginAccount()" class="loginButton">LogIn</button>
       <div class="registerButton">
-        Don't have an account?<router-link to="/register">Register</router-link>
+        ยังไม่มีบัญชีใช่ไหม?<router-link to="/register">สร้างบัญชีผู้ใช้</router-link>
       </div>
     </div>
   </div>
