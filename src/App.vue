@@ -16,8 +16,8 @@ body {
   position: absolute;
   width: 410px;
   height: 410px;
-  left: 1066px;
-  top: 300px;
+  left: 1126px;
+  top: 310px;
   z-index: -1;
 }
 #backgroung2 {

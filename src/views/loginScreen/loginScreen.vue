@@ -26,7 +26,9 @@
       </div>
       <button v-on:click="loginAccount()" class="loginButton">LogIn</button>
       <div class="registerButton">
-        ยังไม่มีบัญชีใช่ไหม?<router-link to="/register">สร้างบัญชีผู้ใช้</router-link>
+        ยังไม่มีบัญชีใช่ไหม?<router-link to="/register"
+          >สร้างบัญชีผู้ใช้</router-link
+        >
       </div>
     </div>
   </div>
@@ -154,7 +156,7 @@ a:hover {
   text-decoration: underline;
 }
 #backgroung {
-  left: 1170px;
-  top: 350px;
+  left: 1126px;
+  top: 310px;
 }
 </style>

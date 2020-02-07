@@ -142,8 +142,8 @@ input {
   box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
   background-color: #6abaff;
 }
-#backgroung{
-  left: 1200px;
-  top: 320px;
+#backgroung {
+  left: 1126px;
+  top: 310px;
 }
 </style>
