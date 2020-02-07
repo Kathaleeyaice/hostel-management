@@ -32,7 +32,7 @@
             type="text"
             class="inputText"
             v-model="inputDate"
-            placeholder="วันที่จอง"
+            placeholder="วันที่ต้องการจอง (วว/ดด/ปปปป - วว/ดด/ปปปป)"
           />
         </div>
         <div class="inputBox">
@@ -46,11 +46,15 @@
       </form>
     </div>
     <div class="bookingRight">
-      <div class="imgBox">
-        img
+      <div>
+        <img
+          src="https://q-cf.bstatic.com/images/hotel/max1024x768/216/216004253.jpg"
+        />
       </div>
-      <div class="bookingButton">
-        <button v-on:click="bookingHotel()">จองโรงแรม</button>
+      <div>
+        <button v-on:click="bookingHotel()" class="bookingButton">
+          จองโรงแรม
+        </button>
       </div>
     </div>
   </div>
@@ -139,20 +143,41 @@ export default {
   margin: 3%;
 }
 input {
-  width: 80%;
-  right: 0;
-  margin-right: 0;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
 }
 .bookingRight {
   width: 50%;
   height: 100%;
 }
-.imgBox {
-  width: 100%;
-  height: 70%;
-  background-color: antiquewhite;
+img {
+  width: 650px;
+  height: 400px;
+  margin: 3vw;
+  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
 }
 .bookingButton {
-  right: 0;
+  background-color: #3c9ff5;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 555px;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+}
+.bookingButton:hover {
+  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+  background-color: #6abaff;
 }
 </style>
