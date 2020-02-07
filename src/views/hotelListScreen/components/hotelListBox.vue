@@ -55,9 +55,8 @@ export default {
   width: 80%;
   height: 20%;
   margin: auto;
-  margin-top: 1%;
+  margin-top: 2%;
   padding: 1%;
-
   box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
   transition: width 0.2s, height 0.2s;
