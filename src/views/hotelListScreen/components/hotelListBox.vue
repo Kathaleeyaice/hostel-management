@@ -52,14 +52,19 @@ export default {
 
 <style scoped>
 .hotelBox {
-  width: 90%;
+  width: 80%;
   height: 20%;
-  border: solid;
   margin: auto;
   margin-top: 1%;
   padding: 1%;
+
+  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  transition: width 0.2s, height 0.2s;
 }
 .hotelBox:hover {
+  box-shadow: 2px 5px 4px rgba(2, 126, 234, 0.25);
   width: 85%;
+  height: 25%;
 }
 </style>

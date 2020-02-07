@@ -71,6 +71,10 @@ export default {
   right: 0;
   bottom: 0;
 }
+.filterBox {
+  margin-top: 2.08333333333vw;
+  margin-left: 9.375vw;
+}
 .availableBox {
   width: 92%;
   height: 5%;

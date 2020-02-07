@@ -4,7 +4,7 @@
       <div class="infoTop">
         <div class="infoTopLeft">
           <div class="imgBox">
-            <img :src="hotelInfo.image">
+            <img :src="hotelInfo.image" />
           </div>
         </div>
         <div class="infoTopRight">

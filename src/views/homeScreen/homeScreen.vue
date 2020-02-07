@@ -53,6 +53,7 @@ export default {
   right: 0;
   bottom: 0;
   display: inline-flex;
+  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
 }
 .homeBox {
   width: 70%;
