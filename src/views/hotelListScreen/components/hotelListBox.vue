@@ -9,10 +9,10 @@
         <h2>{{ hotel.name }}</h2>
         <div>รายละเอียด :{{ hotel.detail }}</div>
         <div>
-          <div v-if="hotel.available">
+          <div v-if="hotel.available" style="color:green">
             ว่าง
           </div>
-          <div v-else>
+          <div v-else style="color:red">
             ไม่ว่าง
           </div>
         </div>
