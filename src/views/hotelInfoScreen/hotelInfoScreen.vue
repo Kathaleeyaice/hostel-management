@@ -8,20 +8,22 @@
           </div>
         </div>
         <div class="infoTopRight">
-          <h2>{{ hotelInfo.name }}</h2>
-          <div>รายละเอียด :{{ hotelInfo.detail }}</div>
-          <div v-if="hotelInfo.available">
+          <div class="nameHeader">{{ hotelInfo.name }}</div>
+          <div class="dataText">รายละเอียด :{{ hotelInfo.detail }}</div>
+          <div v-if="hotelInfo.available" class="dataText" style="color:green">
             สถานะ : ว่าง
           </div>
-          <div v-else>
+          <div v-else class="dataText" style="color:red">
             สถานะ : ไม่ว่าง
           </div>
-          <div>ราคา :{{ hotelInfo.price }}</div>
-          <button v-on:click="goBooking()">จองโรงแรม</button>
+          <div class="dataText">ราคา :{{ hotelInfo.price }}</div>
+          <button v-on:click="goBooking()" class="bookingButton">
+            จองโรงแรม
+          </button>
         </div>
       </div>
       <div class="infoBottom">
-        <h2>ที่อยู่</h2>
+        <div class="nameHeader">ที่อยู่</div>
         <div>{{ hotelInfo.map.address }}</div>
       </div>
     </div>
@@ -77,7 +79,7 @@ export default {
 </script>
 <style scoped>
 .hotelInfoScreen {
-  top: 10vh;
+  top: 5vw;
   left: 0;
   right: 0;
   bottom: 0;
@@ -92,13 +94,40 @@ export default {
 .infoTopLeft {
   width: 50%;
 }
-.imgBox {
-  width: 80%;
-  height: 100%;
-  margin: auto;
-  background-color: antiquewhite;
+img {
+  width: 650px;
+  height: 400px;
+  margin: 3vw;
+  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
 }
 .infoTopRight {
   width: 50%;
+  margin: 3vw;
+}
+.nameHeader {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 1vw;
+}
+.dataText {
+  margin-bottom: 0.5vw;
+}
+.bookingButton {
+  background-color: #3c9ff5;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+}
+.infoBottom {
+  margin-left: 3vw;
 }
 </style>
