@@ -1,20 +1,26 @@
 <template>
   <div class="registerScreen">
-    Create Account
-    <div>
-      <input type="text" v-model="inputUsername" placeholder="ชื่อผู้ใช้" />
+    <img src="./assets/bg.png" id="backgroung" />
+    <img src="./assets/bg2.png" id="backgroung2" />
+    <div class="createAccountBox">
+      <div class="registerHeader">สร้างบัญชีผู้ใช้</div>
+      <div>
+        <input type="text" v-model="inputUsername" placeholder="ชื่อผู้ใช้" />
+      </div>
+      <div>
+        <input type="password" v-model="inputPassword" placeholder="รหัสผ่าน" />
+      </div>
+      <div>
+        <input
+          type="password"
+          v-model="inputRepassword"
+          placeholder="ยืนยันรหัสผ่าน"
+        />
+      </div>
+      <button v-on:click="createUser()" class="registerButton">
+        สร้างบัญชี
+      </button>
     </div>
-    <div>
-      <input type="password" v-model="inputPassword" placeholder="รหัสผ่าน" />
-    </div>
-    <div>
-      <input
-        type="password"
-        v-model="inputRepassword"
-        placeholder="ยืนยันรหัสผ่าน"
-      />
-    </div>
-    <button v-on:click="createUser()">create</button>
   </div>
 </template>
 
@@ -82,4 +88,58 @@ export default {
   props: {}
 };
 </script>
-<style scoped></style>>
+<style scoped>
+.registerScreen {
+  background-color: #f8f8f8;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  font-size: 14px;
+}
+.createAccountBox {
+  width: 20%;
+  height: 50%;
+  margin: auto;
+  margin-top: 10%;
+  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  background-color: #f8f8f8;
+}
+.registerHeader {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 60px;
+  margin-bottom: 25px;
+}
+input {
+  width: 60%;
+  padding: 8px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-left: 60px;
+  margin-bottom: 10px;
+}
+.registerButton {
+  background-color: #3c9ff5;
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+  margin-left: 90px;
+  margin-top: 20px;
+}
+.registeButton:hover {
+  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+  background-color: #6abaff;
+}</style
+>>
