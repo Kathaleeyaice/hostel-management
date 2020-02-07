@@ -129,6 +129,10 @@ img {
   border-radius: 6px;
   box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
 }
+.bookingButton:hover {
+  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+  background-color: #6abaff;
+}
 .infoBottom {
   margin-left: 3vw;
 }
