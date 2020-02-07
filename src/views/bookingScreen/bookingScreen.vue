@@ -44,17 +44,17 @@
           />
         </div>
       </form>
+      <div>
+        <button v-on:click="bookingHotel()" class="bookingButton">
+          จองโรงแรม
+        </button>
+      </div>
     </div>
     <div class="bookingRight">
       <div>
         <img
           src="https://q-cf.bstatic.com/images/hotel/max1024x768/216/216004253.jpg"
         />
-      </div>
-      <div>
-        <button v-on:click="bookingHotel()" class="bookingButton">
-          จองโรงแรม
-        </button>
       </div>
     </div>
   </div>
@@ -171,10 +171,10 @@ img {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin-left: 555px;
   cursor: pointer;
   border-radius: 6px;
   box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+  margin-left: 575px;
 }
 .bookingButton:hover {
   box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
