@@ -1,8 +1,8 @@
 <template>
   <div class="bookingBox">
     <div>{{ hotelBooking.name }}</div>
-    <div>Room: {{ hotelBooking.rooms }}</div>
-    <div>Date: {{ hotelBooking.date }}</div>
+    <div>จำนวนห้อง: {{ hotelBooking.rooms }}</div>
+    <div>วันที่จอง: {{ hotelBooking.date }}</div>
   </div>
 </template>
 
