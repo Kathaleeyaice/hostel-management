@@ -1,5 +1,10 @@
 <template>
   <div class="registerScreen">
+    <div class="navBar">
+      <div class="homeBox">
+        <router-link to="/">หน้าหลัก</router-link>
+      </div>
+    </div>
     <img src="./assets/bg.png" id="backgroung" />
     <img src="./assets/bg2.png" id="backgroung2" />
     <div class="createAccountBox">
@@ -97,6 +102,30 @@ export default {
   left: 0%;
   bottom: 0%;
   font-size: 14px;
+}
+.navBar {
+  width: 100vw;
+  height: 5vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: inline-flex;
+  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+}
+a:link {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+a:hover {
+  text-decoration: underline;
+  color: #3c9ff5;
+}
+.homeBox {
+  width: 70%;
+  padding: 2%;
 }
 .createAccountBox {
   width: 20%;
