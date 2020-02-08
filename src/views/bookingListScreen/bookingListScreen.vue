@@ -22,6 +22,7 @@ export default {
     };
   },
   mounted() {
+    this.checkLogin();
     this.fetchBooking();
   },
   methods: {
@@ -47,6 +48,11 @@ export default {
         .catch(err => {
           console.log(err);
         });
+    },
+    checkLogin() {
+      if (!localStorage.token) {
+        this.$router.push({ path: "/login" });
+      }
     }
   },
   components: {
