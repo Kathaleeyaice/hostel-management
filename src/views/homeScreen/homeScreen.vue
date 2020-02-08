@@ -38,8 +38,8 @@ export default {
   },
   methods: {
     logout() {
+      this.$router.push({ path: "/" });
       localStorage.clear();
-      location.reload();
     }
   },
   components: {},
