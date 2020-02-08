@@ -67,5 +67,6 @@ export default {
   width: 85%;
   height: 25%;
   background-color: #f8f8f8;
+  cursor: pointer;
 }
 </style>
