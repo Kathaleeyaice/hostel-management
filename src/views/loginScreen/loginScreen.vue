@@ -150,7 +150,7 @@ input {
 }
 a:link {
   text-decoration: none;
-  color: black;
+  color: #3c9ff5;
 }
 a:hover {
   text-decoration: underline;
