@@ -11,7 +11,7 @@
         <div class="menuStyle">
           {{ username }}
         </div>
-        <router-link to="mybooking" class="menuStyle">
+        <router-link to="/mybooking" class="menuStyle">
           รายชื่อโรงแรมที่จอง
         </router-link>
         <div v-on:click="logout()" class="menuStyle" id="logputButton">
