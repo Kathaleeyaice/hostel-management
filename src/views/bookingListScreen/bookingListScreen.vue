@@ -11,6 +11,7 @@
 
 <script>
 import bookingBox from "@/views/bookingListScreen/components/bookingBox.vue";
+import config from "../../config.json";
 
 export default {
   name: "bookingListScreen",
@@ -25,16 +26,13 @@ export default {
   },
   methods: {
     fetchBooking() {
-      fetch(
-        `https://4bfb9a7a-3df0-4222-a22f-d666eea1a18f.mock.pstmn.io/booking`,
-        {
-          method: "GET",
-          headers: {
-            Accept: "application/json",
-            Authorization: "Bearer " + localStorage.token
-          }
+      fetch(`${config.api}/booking`, {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          Authorization: "Bearer " + localStorage.token
         }
-      )
+      })
         .then(response => {
           if (response.status != 200) {
             console.log("ERROR Status: " + response.status);
