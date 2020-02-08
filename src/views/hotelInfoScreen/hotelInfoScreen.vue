@@ -5,7 +5,7 @@
         <div class="infoTopLeft">
           <div class="imgBox">
             <img
-              src="https://q-cf.bstatic.com/images/hotel/max1024x768/216/216004253.jpg"
+              :src="hotelInfo.image"
             />
           </div>
         </div>
