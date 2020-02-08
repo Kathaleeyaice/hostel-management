@@ -14,7 +14,7 @@
         <router-link to="/mybooking" class="menu">
           รายชื่อโรงแรมที่จอง
         </router-link>
-        <div v-on:click="logout()" class="menu">
+        <div v-on:click="logout()" class="menu" id="logoutButton">
           ออกจากระบบ
         </div>
       </div>
@@ -69,6 +69,7 @@ a:link {
 }
 a:hover {
   text-decoration: underline;
+  color: #3c9ff5;
 }
 .loginBox {
   width: 30%;
@@ -85,5 +86,10 @@ a:hover {
 }
 .menu {
   margin-left: 10px;
+}
+#logoutButton:hover {
+  text-decoration: underline;
+  color: #3c9ff5;
+  cursor: pointer;
 }
 </style>
