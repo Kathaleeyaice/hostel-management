@@ -8,13 +8,13 @@
         <router-link to="/login">เข้าสู่ระบบ</router-link>
       </div>
       <div class="menuBox" v-else>
-        <div class="menuStyle">
+        <div class="menu">
           {{ username }}
         </div>
-        <router-link to="/mybooking" class="menuStyle">
+        <router-link to="/mybooking" class="menu">
           รายชื่อโรงแรมที่จอง
         </router-link>
-        <div v-on:click="logout()" class="menuStyle" id="logputButton">
+        <div v-on:click="logout()" class="menu">
           ออกจากระบบ
         </div>
       </div>
@@ -83,7 +83,7 @@ a:hover {
   padding: 2%;
   margin: auto;
 }
-.menuStyle {
+.menu {
   margin-left: 10px;
 }
 </style>
