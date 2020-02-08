@@ -117,6 +117,15 @@ export default {
   width: 70%;
   padding: 2%;
 }
+a:link {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+a:hover {
+  text-decoration: underline;
+  color: #3c9ff5;
+}
 .loginBox {
   width: 20%;
   height: 50%;
