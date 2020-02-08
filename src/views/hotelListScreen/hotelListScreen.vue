@@ -75,6 +75,9 @@ export default {
   margin-top: 2.08333333333vw;
   margin-left: 9.375vw;
 }
+#checkbox:hover{
+  cursor: pointer;
+}
 .availableBox {
   width: 92%;
   height: 5%;
