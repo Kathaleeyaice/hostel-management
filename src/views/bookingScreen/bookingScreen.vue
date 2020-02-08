@@ -1,6 +1,6 @@
 <template>
   <div class="bookingScreen">
-    <div class="bookingLeft">
+    <div class="bookingBox">
       <h2>จองโรงแรม {{ $route.query.name }}</h2>
       <form>
         <div class="inputBox">
@@ -48,13 +48,6 @@
         <button v-on:click="bookingHotel()" class="bookingButton">
           จองโรงแรม
         </button>
-      </div>
-    </div>
-    <div class="bookingRight">
-      <div>
-        <img
-          src="https://q-cf.bstatic.com/images/hotel/max1024x768/216/216004253.jpg"
-        />
       </div>
     </div>
   </div>
@@ -135,9 +128,13 @@ export default {
   padding: 2%;
   display: inline-flex;
 }
-.bookingLeft {
+.bookingBox {
   width: 50%;
   height: 100%;
+  margin: auto;
+}
+h2 {
+  margin: 3%;
 }
 .inputBox {
   margin: 3%;
@@ -150,17 +147,6 @@ input {
   border: 1px solid #ccc;
   border-radius: 6px;
   box-sizing: border-box;
-}
-.bookingRight {
-  width: 50%;
-  height: 100%;
-}
-img {
-  width: 650px;
-  height: 400px;
-  margin: 3vw;
-  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
 }
 .bookingButton {
   background-color: #3c9ff5;
